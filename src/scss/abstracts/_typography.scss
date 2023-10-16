@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+$ff-sans: 'Plus Jakarta Sans', sans-serif;
+
+$font-sizes: (
+	mainHeadingDesktop: 3.5rem,
+	mainHeadingTablets: 2.75rem,
+	mainHeadingMobile: 2.0625rem,
+	mediumHeadingDesktop: 2.5rem,
+	mediumHeadingTablets: 2rem,
+	mediumHeadingMobile: 1.625rem,
+	smallerHeadingTablets: 2rem,
+	smallerHeadingMobile: 1.5rem,
+	paragraphMobile: 1rem,
+	paragraphTablets: 1.125rem,
+);
+
+$fw-400: 400;
+$fw-700: 700;

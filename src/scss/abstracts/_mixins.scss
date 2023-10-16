@@ -1,0 +1,49 @@
+@use 'sass:meta';
+@use 'sass:math';
+@use 'sass:map';
+@use 'breakpoints' as *;
+@use 'colors' as *;
+
+// Mixin for breakpoints
+@mixin mq($size) {
+	@if map.has-key($breakpoints, $size) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else if meta.type-of($size) == number {
+		@if math.is-unitless($size) {
+			@error 'when using a number with @mq() make sure to include a unit';
+		} @else {
+			@media screen and (min-width: $size) {
+				@content;
+			}
+		}
+	} @else {
+		@error 'the keyword #{$size} is not in the $breakpoints map';
+	}
+}
+
+// Mixin for buttons
+
+@mixin buttons-ui($display, $size, $bg: #030303, $hoverbg: #755cde, $color: #fff, $radius: 100vh, $cursor: pointer) {
+	display: $display;
+	padding-block: $size;
+	padding-inline: calc($size * 3);
+	border-radius: $radius;
+	color: $color;
+	background-color: $bg;
+	cursor: $cursor;
+	@if ($bg != #030303) {
+		&:hover,
+		&:focus {
+			background-color: #f6a560;
+		}
+	} @else {
+		&:hover,
+		&:focus {
+			background-color: $hoverbg;
+		}
+	}
+	@content;
+}
