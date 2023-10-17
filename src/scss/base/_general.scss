@@ -1,0 +1,43 @@
+@use '../abstracts/' as *;
+
+body {
+	min-height: 100vh;
+	background-color: clr(main, 300);
+	color: clr(main, 900);
+	font-family: $ff-sans;
+	font-weight: $fw-400;
+}
+
+h1 {
+	font-size: fs(mainHeadingMobile);
+	@include mq('medium') {
+		font-size: fs(mainHeadingTablets);
+	}
+	@include mq('large') {
+		font-size: fs(mainHeadingDesktop);
+	}
+}
+
+h2 {
+	font-size: fs(mediumHeadingMobile);
+	@include mq('medium') {
+		font-size: fs(mediumHeadingTablets);
+	}
+	@include mq('large') {
+		font-size: fs(mediumHeadingDesktop);
+	}
+}
+
+h3 {
+	font-size: fs(smallerHeadingMobile);
+	@include mq('medium') {
+		font-size: fs(smallerHeadingTablets);
+	}
+}
+
+p {
+	font-size: fs(paragraphMobile);
+	@include mq('medium') {
+		font-size: fs(paragraphMobile);
+	}
+}

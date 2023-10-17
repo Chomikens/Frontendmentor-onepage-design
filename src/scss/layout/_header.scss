@@ -1,0 +1,27 @@
+@use '../abstracts/' as *;
+
+.header {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	@include mq('small') {
+		justify-content: space-between;
+	}
+
+	&__logo {
+		img {
+			max-width: 2.5rem;
+			min-width: 2rem;
+			width: 100%;
+			aspect-ratio: 1;
+		}
+	}
+	&__button {
+		align-self: flex-end;
+		button {
+			@include buttons-ui(inline-block, 0.7rem);
+			transition: background-color 0.3s ease-in-out;
+		}
+	}
+}
