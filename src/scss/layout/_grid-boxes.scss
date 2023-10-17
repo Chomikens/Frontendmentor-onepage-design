@@ -1,0 +1,42 @@
+@use 'sass:map';
+@use '../abstracts/' as *;
+
+$index: 1;
+
+.grid-showcase {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-auto-flow: dense;
+	gap: 1rem;
+	@include mq('small') {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+
+	@include mq('medium') {
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	article {
+		min-height: 150px;
+		border-radius: 8px;
+		color: map-get($colors, main, 100);
+
+		@each $box, $color in map-get($colors, 'boxes-background') {
+			&:nth-child(#{$index}) {
+				background-color: $color;
+			}
+			$index: $index + 1;
+		}
+	}
+
+	&--col-2 {
+		grid-column: span 2;
+	}
+
+	&--row-2 {
+		grid-row: span 2;
+	}
+}

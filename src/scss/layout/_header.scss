@@ -2,12 +2,9 @@
 
 .header {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 1rem;
-	@include mq('small') {
-		justify-content: space-between;
-	}
 
 	&__logo {
 		img {
