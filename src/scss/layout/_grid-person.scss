@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+
+section {
+	padding-block: 2rem;
+	.grid-person {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: center;
+		justify-items: center;
+		row-gap: 1.5rem;
+		@include mq('medium') {
+			grid-template-columns: 1fr 40px 1fr;
+			grid-template-areas: 'image . text';
+		}
+
+		img {
+			max-width: 450px;
+			width: 100%;
+			@include mq('medium') {
+				grid-area: image;
+			}
+		}
+
+		article {
+			text-align: center;
+			h2 {
+				max-width: 18ch;
+				margin-inline: auto;
+				@include mq('medium') {
+					margin-inline: 0;
+				}
+			}
+
+			@include mq('medium') {
+				grid-area: text;
+				text-align: left;
+			}
+		}
+	}
+}
