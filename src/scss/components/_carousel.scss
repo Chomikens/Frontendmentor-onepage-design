@@ -1,0 +1,27 @@
+@use '../abstracts/' as *;
+
+.container-slider {
+	overflow: hidden;
+	width: 100%;
+	&__slider {
+		display: flex;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+
+		button {
+			padding: 1rem;
+			background-color: map-get($colors, main, 900);
+			border-radius: 50%;
+			transition: background-color 0.3s ease-in-out;
+			cursor: pointer;
+			&:hover,
+			&:focus {
+				background-color: #755cde;
+			}
+		}
+	}
+}
