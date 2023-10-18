@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+
+button[data-accent] {
+	transition: background-color 0.3s ease-in-out;
+	text-align: center;
+}
+
+[data-accent='primary'] {
+	@include buttons-ui(inline-block, 0.7rem);
+}
+
+[data-accent='secondary'] {
+	@include buttons-ui(inline-block, 0.7rem, $bg: #eb7565);
+}

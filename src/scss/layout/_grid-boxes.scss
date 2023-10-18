@@ -20,6 +20,7 @@ $index: 1;
 	}
 
 	article {
+		position: relative;
 		min-height: 150px;
 		border-radius: 8px;
 		color: map-get($colors, main, 100);
@@ -29,6 +30,20 @@ $index: 1;
 				background-color: $color;
 			}
 			$index: $index + 1;
+		}
+
+		p {
+			position: absolute;
+			bottom: 1.5rem;
+			left: 1.5rem;
+		}
+
+		img {
+			position: absolute;
+			top: 1.5rem;
+			right: 1.5rem;
+			object-fit: cover;
+			max-width: 80%;
 		}
 	}
 

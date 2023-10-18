@@ -1,7 +1,10 @@
+@use '../abstracts/' as *;
+
 .intro {
 	text-align: center;
 	p {
 		max-width: 64ch;
 		margin-inline: auto;
+		color: clr(main, 600);
 	}
 }

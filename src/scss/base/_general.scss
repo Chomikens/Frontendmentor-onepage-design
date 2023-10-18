@@ -1,6 +1,8 @@
 @use '../abstracts/' as *;
 
 body {
+	display: flex;
+	flex-direction: column;
 	min-height: 100vh;
 	background-color: clr(main, 300);
 	color: clr(main, 900);
@@ -40,4 +42,11 @@ p {
 	@include mq('medium') {
 		font-size: fs(paragraphMobile);
 	}
+}
+
+// This solutions prevent footer to jump up when content of page is short.
+// Which is why we set flex on body
+
+footer {
+	margin-top: auto;
 }

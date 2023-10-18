@@ -4,19 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I’m Amy, and I'm UX Designer</title>
+  <meta name="description" content="I love working with others to create beautiful design solutions. I’ve designed everything from brand
+  illustrations to complete mobile apps.">
   <script src="/main.js" defer></script>
   <link rel="stylesheet" href="./scss/main.scss">
-  <title>Document</title>
 </head>
 
 <body>
   <header>
-    <div class="container header | margin-block-start-16">
-      <div class="header__logo">
+    <div class="container header-footer | margin-block-start-16">
+      <div class="header-footer__logo">
         <img src="./images/logo.svg" alt="White circle on black background" height="64" width="64">
       </div>
-      <div class="header__button">
-        <button>Free consultation</button>
+      <div class="header-footer__button">
+        <button data-accent='primary'>Free consultation</button>
       </div>
     </div>
   </header>
@@ -33,30 +35,53 @@
     <div class="container grid-showcase">
       <article class="grid-showcase--col-2 grid-showcase--row-2">
         <p>Graphic Desing</p>
-        <img src="" alt="">
+        <img src="./images/pattern-graphic-design.svg" aria-hidden="true" width="128" height="192">
       </article>
       <article>
         <p>UI/UX</p>
-        <img src="" alt="">
+        <img src="./images/pattern-ui-ux.svg" aria-hidden="true" width="64" height="64">
       </article>
       <article>
         <p>Apps</p>
-        <img src="" alt="">
+        <img src="./images/pattern-apps.svg" aria-hidden="true" width="64" height="64">
       </article>
       <article class="grid-showcase--col-2 | relocateOnTablet">
         <p>Photography</p>
-        <img src="" alt="">
+        <img src="./images/pattern-photography.svg" aria-hidden="true">
       </article>
       <article class="grid-showcase--col-2">
         <p>Illustrations</p>
-        <img src="" alt="">
+        <img src="./images/pattern-illustrations.svg" aria-hidden="true">
       </article>
       <article class="grid-showcase--col-2">
         <p>Motion Graphics</p>
-        <img src="" alt="">
+        <img src="./images/pattern-motion-graphics.svg" aria-hidden="true">
       </article>
     </div>
   </section>
+  <section>
+    <div class="container">
+      <div></div>
+      <article>
+        <h2>I’m Amy, and I’d love to work on your next project</h2>
+        <p>I love working with others to create beautiful design solutions. I’ve designed everything from brand
+          illustrations to complete mobile apps. I’m also handy with a camera!</p>
+        <button data-accent="secondary">Free consultation</button>
+      </article>
+    </div>
+  </section>
+
+
 </main>
+<footer>
+  <div class="container header-footer | margin-block-end-32">
+    <div class="header-footer__logo">
+      <img src="./images/logo.svg" alt="White circle on black background" height="64" width="64">
+    </div>
+    <div class="header-footer__button">
+      <button data-accent='primary'>Free consultation</button>
+    </div>
+  </div>
+</footer>
 
 </html>
