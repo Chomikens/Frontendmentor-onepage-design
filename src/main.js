@@ -1,42 +1,31 @@
-class Carousel {
-    constructor(element) {
-      this.container = element.querySelector('.container-slider__slider');
-      this.currentIndex = 0;
-      this.items = this.container.querySelectorAll('img');
-      this.totalItems = this.items.length;
-  
-      this.nextButton = element.querySelector('.button--right');
-      this.prevButton = element.querySelector('.button--left');
-  
-      this.nextButton.addEventListener('click', () => this.nextSlide());
-      this.prevButton.addEventListener('click', () => this.prevSlide());
-  
-      // Ensure initial state is set
-      this.update();
-    }
-  
-    nextSlide() {
-      this.currentIndex++;
-      if (this.currentIndex >= this.totalItems) {
-        this.currentIndex = 0;
-      }
-      this.update();
-    }
-  
-    prevSlide() {
-      this.currentIndex--;
-      if (this.currentIndex < 0) {
-        this.currentIndex = this.totalItems - 1;
-      }
-      this.update();
-    }
-  
-    update() {
-      const offset = -(this.currentIndex * 100);
-      this.container.style.transform = `translateX(${offset}%)`;
-    }
-  }
-  
-  // Initialize carousel for the given element
-  new Carousel(document.querySelector('.container-slider'));
-  
+import Swiper from 'swiper'
+import { Navigation, Keyboard } from 'swiper/modules'
+
+const indexSwiper = new Swiper('.swiper', {
+	modules: [Navigation, Keyboard],
+	direction: 'horizontal',
+	slidesPerView: '2.',
+	centeredSlides: true,
+	loop: true,
+	keyboard: {
+		enabled: true,
+		onlyInViewport: false,
+	},
+	navigation: {
+		nextEl: '.button--right',
+		prevEl: '.button--left',
+	},
+	breakpoints: {
+		768: {
+			centeredSlides: false,
+			loop: false,
+			slidesPerView: 2.3,
+			spaceBetween: 20,
+		},
+		1024: {
+			slidesPerView: 3,
+		},
+	},
+})
+
+export default indexSwiper

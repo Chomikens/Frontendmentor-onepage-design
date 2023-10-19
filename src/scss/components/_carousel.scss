@@ -1,12 +1,11 @@
 @use '../abstracts/' as *;
 
 .container-slider {
-	overflow: hidden;
-	width: 100%;
-	&__slider {
-		display: flex;
+	img {
+		width: 100%;
+		aspect-ratio: 16/9;
+		object-fit: cover;
 	}
-
 	&__buttons {
 		display: flex;
 		justify-content: center;
