@@ -17,9 +17,13 @@
 			border-radius: 50%;
 			transition: background-color 0.3s ease-in-out;
 			cursor: pointer;
-			&:hover,
+			&:hover,	
 			&:focus {
 				background-color: #755cde;
+			}
+			&:focus {
+				outline: 2px solid #eb7565;
+				outline-offset: 2px;
 			}
 		}
 	}

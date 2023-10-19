@@ -23,6 +23,10 @@ section {
 
 		article {
 			text-align: center;
+			@include mq('medium') {
+				grid-area: text;
+				text-align: left;
+			}
 			h2 {
 				max-width: 18ch;
 				margin-inline: auto;
@@ -30,10 +34,9 @@ section {
 					margin-inline: 0;
 				}
 			}
-
-			@include mq('medium') {
-				grid-area: text;
-				text-align: left;
+			p {
+				color: clr(main, 600);
+				line-height: 1.5;
 			}
 		}
 	}

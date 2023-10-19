@@ -4,9 +4,10 @@ import { Navigation, Keyboard } from 'swiper/modules'
 const indexSwiper = new Swiper('.swiper', {
 	modules: [Navigation, Keyboard],
 	direction: 'horizontal',
-	slidesPerView: '2.',
-	centeredSlides: true,
-	loop: true,
+	initialSlide: 0,
+	slidesPerView: 1,
+	centeredSlidesBounds: true,
+	rewind: true,
 	keyboard: {
 		enabled: true,
 		onlyInViewport: false,
@@ -16,14 +17,16 @@ const indexSwiper = new Swiper('.swiper', {
 		prevEl: '.button--left',
 	},
 	breakpoints: {
+		540: {
+			slidesPerView: 2,
+			spaceBetween: 10,
+		},
 		768: {
-			centeredSlides: false,
-			loop: false,
-			slidesPerView: 2.3,
-			spaceBetween: 20,
+			spaceBetween: 10,
 		},
 		1024: {
 			slidesPerView: 3,
+			spaceBetween: 10,
 		},
 	},
 })
