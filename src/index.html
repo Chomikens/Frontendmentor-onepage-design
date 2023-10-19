@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <div class="container header-footer | margin-block-start-16">
+    <div class="container header-footer | padding-block-32">
       <div class="header-footer__logo">
         <img src="./images/logo.svg" alt="White circle on black background" height="64" width="64">
       </div>
@@ -34,7 +34,7 @@
   </section>
 
 
-  <section>
+  <section class="padding-block-32">
     <div class="container grid-showcase">
       <article class="grid-showcase--col-2 grid-showcase--row-2">
         <p>Graphic Desing</p>
@@ -63,8 +63,8 @@
     </div>
   </section>
 
-  
-  <section>
+
+  <section class="padding-block-32">
     <div class="container grid-person">
       <div>
         <img src="./images/image-amy.webp" alt="Picture of women on green background" width="890" height="890">
@@ -78,10 +78,12 @@
     </div>
   </section>
 
-  <section>
-    <div class="container">
-      <h3>My work</h3>
-    </div>
+  <section class="padding-block-32">
+    <header class="my-work__header">
+      <div class="container">
+        <h3 class="padding-block-end-32">My work</h3>
+      </div>
+    </header>
     <div class="container-slider swiper">
       <div class="container-slider__slider swiper-wrapper">
         <div class="swiper-slide">
@@ -101,7 +103,7 @@
         </div>
       </div>
     </div>
-    <div class="container-slider__buttons margin-block-start-20">
+    <div class="container-slider__buttons margin-block-start-32">
       <button class="button--left" aria-label="move left">
         <img src="./images/icon-arrow-left.svg" alt="Left arrow icon">
       </button>
@@ -112,7 +114,21 @@
   </section>
 
 </main>
-<footer>
+
+<section class="cta padding-block-32">
+  <div class="container flex">
+    <article class="cta__text-container flow">
+      <h2>Book a call with me</h2>
+      <p>I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during
+        a free consultation. Then we can move forward from there.</p>
+    </article>
+    <div class="cta_button-container">
+      <button data-accent='secondary'>Free consultation</button>
+    </div>
+  </div>
+</section>
+
+<footer class="padding-block-32">
   <div class="container header-footer | margin-block-end-32">
     <div class="header-footer__logo">
       <img src="./images/logo.svg" alt="White circle on black background" height="64" width="64">

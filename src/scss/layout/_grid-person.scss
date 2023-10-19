@@ -1,7 +1,6 @@
 @use '../abstracts/' as *;
 
 section {
-	padding-block: 2rem;
 	.grid-person {
 		display: grid;
 		grid-template-columns: 1fr;

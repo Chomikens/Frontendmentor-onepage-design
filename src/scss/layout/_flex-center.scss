@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use '../abstracts/' as *;
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	padding-block: 5rem;
+	padding-inline: 4.025rem;
+	@include mq('medium') {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	gap: 2rem;
+	background-color: map.get($colors, main, 900);
+	color: map.get($colors, main, 100);
+
+	.cta__text-container {
+		max-width: 540px;
+		text-align: center;
+		@include mq('medium') {
+			text-align: left;
+		}
+	}
+
+	.cta_button-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+	}
+}
